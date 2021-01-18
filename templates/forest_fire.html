@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">False Alarm Detection</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of False Alarm Detection
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/test_model' method="post" class="col s12 center">
+      <div class="row">
+        <div class="input-field col s8">
+            <label for="first_name"><b>Ambient Temperature</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row" >
+        <div class="input-field col s8">
+          <label class= for="Calibration" ><b>Calibration </b></label>
+            <br>
+          <input id="Calibration" name="Calibration" placeholder="Calibration"  type="text" class="validate">
+        </div>
+        </div>
+
+      <div class="row" >
+        <div class="input-field col s8">
+            <label for="_name"><b>Unwanted substance deposition</b></label>
+            <br>
+          <input id="_name" name="substance" placeholder="Unwanted substance deposition" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row" >
+        <div class="input-field col s8">
+          <label class= for="Humidity" ><b>Humidity </b></label>
+            <br>
+          <input id="Humidity" name="Humidity" placeholder="Humidity"  type="text" class="validate">
+        </div>
+        </div>
+      <div class="row" >
+        <div class="input-field col s8">
+          <label class= for="h2s" ><b>H2S Content </b></label>
+            <br>
+          <input id="h2s" name="h2s" placeholder="H2S Content"  type="text" class="validate">
+        </div>
+        </div>
+      <div class="row" >
+        <div class="input-field col s8">
+          <label class= for="detected" ><b>detected by </b></label>
+            <br>
+          <input id="detected" name="detected" placeholder="detected by"  type="text" class="validate">
+        </div>
+        </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light green">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+  </div>
+<div id="pred">
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
