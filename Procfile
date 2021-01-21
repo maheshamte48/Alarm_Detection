@@ -1,1 +1,1 @@
-web: gunicorn Project:app
+web: uwsgi uwsgi.ini
