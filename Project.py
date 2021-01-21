@@ -40,4 +40,4 @@ def test():
         return render_template('forest.html', pred="True Alarm Danger ")
 
 
-app.run(debug=True,port=7000)
+app.run()
